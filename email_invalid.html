@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+		<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+        <title>Invalid Email Address</title>
+        <style>
+            
+            body,html{
+                font-family: Inter;
+            }
+            @media (min-width: 767.98px) {
+                .otpform{
+                    max-width: 450px;                    
+                    min-height: 569px !important;
+                    flex-grow: 0;
+                    margin-left:128px !important;
+                    padding: 39px 33px 40px 40px;
+                    border-radius: 24px;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+                    border: solid 1px rgba(0, 179, 134, 0.5);
+                    background-color: #fff;
+                }
+
+                
+
+                input {
+                    margin: 0 42px 0 0;
+                    width: 45px;
+                    height: 49px;
+                    flex-grow: 0;                    
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 13px 16px 14px 17px;
+                    border-radius: 8px;
+                    border: solid 1px #f53719 !important;
+                    background-color: #fff;                    
+                }
+
+                .btn-subm{                    
+                    flex-grow: 0;
+                    margin: 262px 7px 0 0;
+                    padding: 9px 132px 9px 133px;
+                    border-radius: 8px;
+                    background-color: #00b386;
+                    font-size: 18px;
+                }
+
+                .Resend-OTP {                
+                    margin-left:165px !important;
+                    width: 83px;
+                    height: 17px;
+                    font-size: 14px;
+                    text-align: right;
+                    color: #00b386;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                .otpform{
+                    margin-top:5px;
+                    width: 100%;
+                    min-height: 250px !important;
+                    flex-grow: 0;
+                    padding: 39px 33px 40px 40px;
+                    border-radius: 24px;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+                    border: solid 1px rgba(0, 179, 134, 0.5);
+                    background-color: #fff;
+                }
+
+                input {
+                    width: 40px;
+                    height: 44px;
+                    flex-grow: 0;
+                    margin: 0 8px;
+                    padding: 13px 15px 14px 16px;
+                    border-radius: 8px;
+                    border: solid 1px #00b386;
+                    background-color: #fff;
+                }
+
+                .btn-subm{                    
+                    flex-grow: 0;
+                    margin-top:50px;
+                    font-size: 18px;
+                    border-radius: 8px;
+                    background-color: #00b386;
+                }
+
+                .Resend-OTP {        
+                    margin-left:70px !important;   
+                    width: 83px;
+                    height: 17px;
+                    font-size: 14px;
+                    text-align: right;
+                    color: #00b386;
+                }
+            }
+
+           
+            .cmntext{
+                flex-grow: 0;
+                font-family: Inter;                
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;               
+                font-weight: normal;
+                font-stretch: normal;
+                font-weight: 600;
+            }
+
+            
+
+           .Verify-your-mobile {               
+                font-size: 16px;
+                width: 141px;
+                height: 19px;
+                flex-grow: 0;
+                margin: 0 136px 16px 0;
+                font-size: 16px;
+                line-height: normal;                
+                color: #525355;
+            }
+
+            .An-OTP-has-been-sent-on-mobile-number-XXXXXXX2040 {
+                margin: 16px 6px 29px 0;
+                font-size: 13px;
+                text-align: left;
+                color: #525355;
+            }
+
+            .Enter-OTP {
+                margin: 29px 229px 15px 0;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="mt-3">
+                <a href="index.html" class="">
+                    <img src="./images/Logo.svg" class="img img-fluid" >
+                </a>
+            </header>
+            <div class="row">
+                <div class="col-md-6 d-none d-sm-block mblimg">
+                   <img src="./images/sc2/full_screen2.png" class="img img-fluid" width="95%">
+                </div>
+                <div class="col-sm-6 ">
+                    <form class="otpform" action="" method="get">
+                        <h6 class="Verify-your-mobile cmntext">
+                            Verify your email
+                        </h6>
+                        <h5 class="An-OTP-has-been-sent-on-mobile-number-XXXXXXX2040 ">
+                            An OTP has been sent on email nxxj@indira.com &nbsp;<a href="#"><i style="color:#00b386;font-size:17px;" class="fa fa-pencil" aria-hidden="true"></i></a>
+                        </h5>
+                        <h6 class="Enter-OTP " >
+                            Enter OTP
+                        </h6>
+                        <div class="">
+                            <input autofocus oninput="moveToNextInput(this)" type="text" name="digit1" maxlength="1"  required>
+                            <input type="text"  oninput="moveToNextInput(this)" name="digit2" maxlength="1"  required>
+                            <input type="text"  oninput="moveToNextInput(this)" name="digit3" maxlength="1"  required>
+                            <input type="text"  oninput="moveToNextInput(this)" name="digit4" maxlength="1"  required>    
+                        </div>
+                        <div class="mt-3 cmntext">
+                            <span class=" text-danger" style="font-size:14px;">Invalid OTP</span>
+                            <a class="Resend-OTP text-decoration-none "  href="#" >Resend OTP</a>
+                        </div>
+                        <div class="d-grid gap-2 ">
+                            <button class="btn btn-success text-white btn-subm" type="submit"><strong >Verify OTP</strong></button>
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+        <script>
+            function moveToNextInput(currentInput) {
+            // Get the length of the input value
+            var inputValueLength = currentInput.value.length;
+        
+            // If a digit is entered, move focus to the next input field
+            if (inputValueLength === 1) {
+                var nextInput = currentInput.nextElementSibling;
+                if (nextInput) {
+                nextInput.focus();
+                }
+            }
+            }
+        </script>
+    </body>
+</html>
