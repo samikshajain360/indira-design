@@ -1,18 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link href="./style.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
 
-    <title>E-sign</title>
+    <title>Signature</title>
     <style>
         body,
         html {
@@ -20,16 +20,46 @@
             /* padding-right:20px !important; */
             font-family: Inter;
         }
+
+        #kyc_icon {
+            border: solid 2px #00b386 !important;
+
+        }
+
+        #kyc_icon h6 {
+            color: #00b386 !important;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <span class="Sign-using-the-finger-or-stylus">
+                    Sign using the finger or stylus
+                    <canvas id="canvas" width="497" style="border:1px solid #000; border-color: white; "
+                        class="canvas"></canvas>
+                    <i class="fas fa-palette" id="colorIcon"></i>
+                </span>
+                <div class="dashed-line"></div>
+                <div class="main-icon">
+                    <div class="sign-container"></div>
+                    <button class="submit-btn " onclick="saveSignature()">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="container-fluid m-0 p-0">
-
         <div class="row ">
-
             <div class="col-md-5 box1_parent d-none d-sm-block">
-
                 <div class="Rectangle-25211 box1_child1">
                     <!-- <div>
                             <h1 class="heading"> <i class="fa fa-angle-left"></i>Go Back</h1>
@@ -39,28 +69,28 @@
                     </a>
                 </div>
                 <a href="pan_enter.html">
-                    <img src="./images/Logo.svg" class="img img-fluid pan_logo">
+                    <img src="./images/logo_indira.png" class="img img-fluid pan_logo">
                 </a>
-                <div class="box1_child2 ">
-                    <div class="pan_icons">
-                        <img src="./images/sc3/Component.svg" class="img img-fluid">
-                        <div class="Vector-1973"></div>
-                        <h6 class="icons_hdg common_font-1">KYC Details</h6>
+                <div class="box1_child2-1 ">
+                    <div class="pan_icons" id="kyc_icon">
+                        <img src="./images/icons/1.svg" class="img img-fluid">
+                        <div class="Vector-1974"></div>
+                        <h6 class="icons_hdg common_font">KYC Details</h6>
                     </div>
                     <div class="pan_icons">
-                        <img src="./images/sc3/Component.svg" class="img img-fluid">
-                        <div class="Vector-1973"></div>
-                        <h6 class="icons_hdg common_font-1">Personal Details</h6>
+                        <img src="./images/icons/2.svg" class="img img-fluid">
+                        <div class="Vector-1974"></div>
+                        <h6 class="icons_hdg common_font">Personal Details</h6>
                     </div>
                     <div class="pan_icons">
-                        <img src="./images/sc3/Component.svg" class="img img-fluid">
-                        <div class="Vector-1973"></div>
-                        <h6 class="icons_hdg common_font-1">Bank Verification</h6>
+                        <img src="./images/icons/3.svg" class="img img-fluid">
+                        <div class="Vector-1974"></div>
+                        <h6 class="icons_hdg common_font">Bank Verification</h6>
                     </div>
                     <div class="pan_icons">
-                        <img src="./images/sc3//Component.svg" class="img img-fluid">
-                        <div class="Vector-1973"></div>
-                        <h6 class="icons_hdg common_font-1">Verify Identity</h6>
+                        <img src="./images/icons/4.svg" class="img img-fluid">
+                        <div class="Vector-1974"></div>
+                        <h6 class="icons_hdg common_font">Verify Identity</h6>
                     </div>
                     <div class="pan_icons">
                         <img src="./images/icons/5.svg" class="img img-fluid">
@@ -71,27 +101,15 @@
             </div>
             <div class="col-sm-7 box2_parent">
                 <div class="pan_verif_form">
-                    <div class="e-sign-container">
-                    <form  action="" method="get">
-                            <h6 class="PAN-Verification">
-                                E-sign Form
-                            </h6>
-                            <span class="pan_sub_hdg common_font">
-                                Last Step. Phew!
-                            </span>
-                            <div>
-                            <div class="input-form">
-                                <!-- <input required type="text" name="pan"  class="e-form" id="" placeholder=" Name in signed document"> -->
-                            <div class="e-form"><p class="document">Name in signed document</p><span class="detail">Dhruv Mishra</span></div>
-                            <div class="e-form"><p class="document">Name in signed document</p><span  class="detail">dhruv.mishra12@gmail.com</span></div>
+                    <div>
+                        <img src="./images/degilocker.svg" class="img img-fluid digiimg" />
+                        <div class="common_font degi">
+                            <h5 class="digi_hdg1"><strong>Fetch your Aadhaar using Digilocker</strong></h5>
+                            <h6 class="digi_hdg2">Yes, Quicker process with no manual uploads</h6>
                         </div>
-                        <div class="e-form1"><p class="document">Name in signed document</p><span  class="detail">OTP will be sent to Aadhaar linked mobile/ email</span></div>
-                        <button type="submit" class="e-sign-btn"><span class="continue">Continue</span></button>
-                        </div>
-                        </form>
+                        <a href="#" style="margin-top:50px;" class="btn btn-success btn-block pan_submit_btn  ">Continue
+                            with Digilocker</a>
                     </div>
-                    
-                    
                 </div>
                 <div class="box2_child2">
 
@@ -106,20 +124,159 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function saveSignature() {
+
+            var signatureDataURL = canvas.toDataURL();
+
+            localStorage.setItem('signature', signatureDataURL);
+            clearCanvas()
+
+            var signature = localStorage.getItem("signature");
+
+            console.log(signature)
+
+            console.log('Signature saved to localStorage.');
+        }
+        function loadSignature() {
+
+            var signatureDataURL = localStorage.getItem('signature');
+            if (signatureDataURL) {
+
+                var img = new Image();
+
+                img.src = signatureDataURL;
+
+                document.body.appendChild(img);
+
+            } else {
+                console.log('No signature found in localStorage.');
+            }
+        }
+
+        loadSignature();
         $(document).ready(function () {
             window.onbeforeunload = function () {
                 window.scrollTo(0, 0);
             }
         });
+
+        $(window).on('load', function () {
+            $('#exampleModalCenter').modal('show');
+        });
+
+        $(document).ready(function () {
+            $('#imageIcon').click(function () {
+                $('#fileInput').click();
+            });
+
+            $('#fileInput').change(function () {
+                // Handle the file selection here
+                var file = $(this).prop('files')[0];
+                console.log('Selected file:', file);
+            });
+        });
+
+        var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff']; // Add more colors if needed
+        var currentColorIndex = 0;
+
+        // Handle click event on the color icon
+        $('#colorIcon').click(function () {
+            // Get the next color from the array
+            var color = colors[currentColorIndex];
+            // Apply the color
+            $('.your-element').css('color', color); // Change '.your-element' to your actual element selector
+            // Increment the color index or reset it if it reaches the end of the array
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        });
+        const colorPalette = document.getElementById('colorPalette');
+        const colorIcon = document.getElementById('colorIcon');
+        const colorButtons = document.querySelectorAll('.colorButton');
+
+        // Toggle visibility of the color palette when clicking on the color icon
+        colorIcon.addEventListener('click', () => {
+            colorPalette.style.display = (colorPalette.style.display === 'none' || colorPalette.style.display === '') ? 'block' : 'none';
+        });
+
+        // Event listener for color button click
+        colorButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                currentColor = button.style.backgroundColor;
+                colorPalette.style.display = 'none'; // Hide color palette after selecting a color
+            });
+        });
+
+
+        // Event listener for color button click
+        colorButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                currentColor = button.style.backgroundColor;
+                colorPalette.style.display = 'none';
+            });
+        });
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        var isDrawing = false;
+        var lastX = 0;
+        var lastY = 0;
+        var currentColor = '#000000'; // Default color
+        let isPenMode = true; // Flag to track whether pen mode or eraser mode is active
+
+        // Event listener for drawing on the canvas when mouse is clicked
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mousemove', draw);
+
+        const eraserButton = document.getElementById('eraser');
+
+        eraserButton.addEventListener('click', () => {
+            isPenMode = !isPenMode; // Toggle between pen and eraser modes
+            if (isPenMode) {
+                canvas.style.cursor = 'url("/images/pen.png"), auto'; // Change cursor to pen icon
+            } else {
+                canvas.style.cursor = 'url("/images/eraser.png"), auto'; // Change cursor to eraser icon
+            }
+        });
+
+        // Function to start drawing
+        function startDrawing(e) {
+            isDrawing = true;
+            [lastX, lastY] = [e.offsetX, e.offsetY];
+        }
+
+        // Function to stop drawing
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        // Function to draw on the canvas
+        function draw(e) {
+            if (!isDrawing) return;
+
+            if (isPenMode) {
+                ctx.strokeStyle = currentColor;
+            } else {
+                ctx.strokeStyle = '#FFFFFF'; // Set the color to white to simulate erasing
+            }
+            ctx.lineCap = 'round';
+            ctx.lineWidth = 5;
+
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+
+            [lastX, lastY] = [e.offsetX, e.offsetY];
+        }
+
+
     </script>
+
 </body>
 
 </html>

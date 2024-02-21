@@ -25,25 +25,22 @@ input[type=radio]#louie {
 
 /*Pan Card Page*/
 
-@media (min-width: 767.98px) {
+@media (min-width: 768px) {
     .pan_verif_form {
         width: 571px;
         height: 569px;
-        flex-grow: 0;
-        /* margin: 39px 148px 100px 168px; */
-        margin: 159px;
         margin-top: 99px;
-        /* padding: 40px 102px 40px 40px; */
         padding: 40px !important;
         border-radius: 24px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
         background-color: #fff;
     }
-
+    .box2_child2{
+        margin-left: 36px !important;
+    }
     .pan_submit_btn {
         max-width: 360px;
         max-height: 40px;
-        flex-grow: 0;
         margin: 230px 14px 0 55px;
         font-size: 18px;
         font-weight: bold;
@@ -52,9 +49,11 @@ input[type=radio]#louie {
         background-color: #00b386;
         text-align: center;
     }
-
+    .submit-btn-1{
+        margin: 0;
+    }
+   
 }
-
 
 @media (max-width: 767.98px) {
     body {
@@ -62,23 +61,16 @@ input[type=radio]#louie {
     }
 
     .pan_verif_form {
-        width: 571px;
-        height: 569px;
-        flex-grow: 0;
-        margin: 159px;
-        /* margin: 39px 148px 100px 168px; */
+        width: 90%; /* Adjust width to fit smaller screens */
         margin-top: 99px;
-        /* padding: 40px 102px 40px 40px; */
         padding: 49px !important;
         border-radius: 24px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
         background-color: #fff;
+        margin: 12px auto;
     }
 
     .pan_submit_btn {
-
-        flex-grow: 0;
-
         font-size: 18px;
         font-weight: bold;
         padding: 9px 148px 9px 149px;
@@ -86,7 +78,12 @@ input[type=radio]#louie {
         background-color: #00b386;
         text-align: center;
     }
+    .box2_child2{
+        display: none;
+    }
+    
 }
+
 
 
 .pan_logo {
@@ -163,6 +160,21 @@ input[type=radio]#louie {
     position: absolute;
 }
 
+.box1_child2-1 {
+    position: absolute;
+    width: 390px;
+    height: 494px;
+    flex-grow: 0;
+    /* margin: 77px 168px 137px 46px !important; */
+    margin-top: 55px !important;
+    margin-left: 46px;
+    padding: 72px 134px 67px 52px;
+
+    border-radius: 24px;
+    border: solid 1px #00b386;
+    background-color: #fff;
+    list-style-type: none;
+}
 .box1_child2 {
     position: absolute;
     width: 390px;
@@ -241,11 +253,19 @@ input[type=radio]#louie {
     width: 21px;
     height: 768px;
     height: 100vh;
-    margin-left: 12px !important;
+    /* margin-left: 12px !important; */
     background-color: rgba(0, 179, 134, 0.1);
 }
 
 /* bank detail */
+.box2_child2-1{
+    border-top-left-radius: 10%;
+    width: 21px;
+    height: 768px;
+    height: 100vh;
+    margin-left: 44px !important;
+    background-color: rgba(0, 179, 134, 0.1);
+}
 .right-container {
     display: flex;
     margin-right: 23px;
@@ -461,9 +481,11 @@ input[type=radio]#louie {
     flex-grow: 0;
     border-color: aquamarine;
     opacity: 0.9;
+    margin-top: 23px;
     border-radius: 8px;
     background-color: #00b386;
     margin-left: 67px;
+    margin-top: 40px;
 }
 
 .document {
@@ -638,12 +660,13 @@ input[type=radio]#louie {
 }
 .another-nominee{
     display: flex;
+    align-items: center;
 }
 .Would-you-like-to-add-another-nominee {
     width: 227px;
     height: 15px;
     flex-grow: 0;
-    margin: 6px 46px 204px 0;
+    /* margin: 6px 46px 23px 0; */
     font-family: Inter;
     font-size: 12px;
     font-weight: normal;
@@ -672,6 +695,238 @@ input[type=radio]#louie {
     font-family: Inter;
     border-color: aquamarine;
   }
+  .Hi-Dhruv{
+    width: 67px;
+    height: 19px;
+    flex-grow: 0;
+    margin: 0 10px 16px 0;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--gunmetal);
+  }
+  /* personal-detail-3.2 */
+
+  .Below-1-Lakh {
+    width: 123px;
+    height: 14px;
+    flex-grow: 0;
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00b386;
+  }
+  .e-form-1{
+    width: 241px;
+    height: 56px;
+    flex-grow: 0;
+    border-color: #00b386 !important;
+    display: flex;
+    align-items: center;
+    margin: 30px 30px 41px 0;
+    opacity: 0.9;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    border: solid 0.5px #f4f4f4;
+    background-color: rgba(219, 216, 216, 0.15);
+  }
+  .e-form-2{
+    width: 241px;
+    height: 56px;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    margin: 30px 30px 41px 0;
+    opacity: 0.9;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    border: solid 0.5px #f4f4f4;
+    background-color: rgba(219, 216, 216, 0.15);
+  }
+  .message{
+    width: 470px;
+    height: 24px;
+    flex-grow: 0;
+    margin: -16px 0 302px;
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #525355;
+  }
+  /* personal-detail-3 */
+  .What-is-your-annual-income- {
+  width: 166px;
+  height: 15px;
+  flex-grow: 0;
+  margin: 29px 19px 23px 0;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #525355;
+}
+.form-1{
+    display: flex;
+    align-items: center;
+}
+.income-name{
+    width: 328px;
+    height: 45px;
+    /* margin: 6px 30px 30px 1px; */
+    padding: 14px 16.1px 13px 8.6px;
+    border-radius: 8px;
+    border: solid 1px rgba(141, 146, 146, 0.2);
+    background-color: #fff;
+    font-size: 14px;
+}
+.e-form1-1{
+    width: 130px;
+    height: 17px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #999;
+    width: 513px;
+  height: 44px;
+    flex-grow: 0;
+    margin: 4px 0 20px;
+    display: flex;
+    align-items: center;
+    padding: 9px 73px 9px 16px;
+    opacity: 0.9;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    border: solid 0.5px #f4f4f4;
+}
+.e-form1-2{
+    width: 512px;
+    height: 56px;
+    flex-grow: 0;
+    margin: 4px 0 100px;
+    padding: 9px 177px 9px 16px;
+    opacity: 0.9;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    border: solid 0.5px #f4f4f4;
+}
+.document-1{
+    height: 15px;
+    width: 350px;
+    flex-grow: 0;
+    margin: 0 0 5px;
+    opacity: 0.9;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #999;
+}
+.radio-btn-1{
+    margin-left: 92px;
+
+}
+.I-am-not-a-politically-exposed-person {
+    width: 207px;
+    height: 15px;
+    flex-grow: 0;
+    margin: 0 0 1px 12px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #525355;
+  }
+  .checkbox-1{
+    margin-top: 23px;
+  }
+  input[type=checkbox]#exposed {
+    accent-color: rgb(6, 153, 67);
+}
+.main-form{
+    margin: 28px 0;
+}
+/* fill-contact-detail */
+.e-1-form1{
+    width: 130px;
+    height: 17px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #999;
+    width: 513px;
+    height: 44px;
+      flex-grow: 0;
+      margin: 35px 0 20px;
+      display: flex;
+      align-items: center;
+      padding: 9px 128px 9px 16px;
+      opacity: 0.9;
+      border-radius: 6px;
+      background-color: white;
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+      border: solid 0.5px #f4f4f4;
+}
+.continue-1{
+    width: 360px;
+    height: 40px;
+    flex-grow: 0;
+    border-color: aquamarine;
+    opacity: 0.9;
+    margin-top: 23px;
+    border-radius: 8px;
+    background-color: #00b386;
+    margin-left: 67px;
+    margin-top: 131px;
+}
+.Dont-remember-IFSC-Code-Search{
+    position: absolute;
+    margin: -51px 0 0 284px;
+    font-family: Inter;
+    color: #999;
+    font-size: 12px;
+}
+.text-style-1{
+    color: #00b386;
+}
 
 @media screen and (min-width: 1600px) {
     .container-fluid {
@@ -691,7 +946,7 @@ input[type=radio]#louie {
         max-width: 1250px;
     }
 }
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1366px) {
 
     body, html {
         max-width: 3450px;
@@ -707,12 +962,16 @@ input[type=radio]#louie {
         display: flex;
         align-items: center;
     }
-    .box_child{
+    /* .box_child{
         margin-top: 192px;
-    }
+    } */
     .submit-btn {
         margin: 212px 14px 0px 77px;
         
+    }
+    .box1_child2-1{
+        top: 167px;
+    
     }
 }
 @media screen and (min-width: 2000px) {
@@ -730,5 +989,62 @@ input[type=radio]#louie {
         border-radius: 24px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
         background-color: #fff;
+    }
+}
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    .e-form-1,
+    .e-form-2 {
+        width: 200px;
+    }
+
+    .message {
+        width: 400px;
+    }
+    .box2_child2 {
+        border-top-left-radius: 10%;
+        width: 21px;
+        height: 100vh;
+        background-color: rgba(0, 179, 134, 0.1);
+        position: relative;
+        top: 0;
+        left: calc((100vw - 1370px) / 2);
+    }
+}
+@media screen and (min-width: 1499px) and (max-width: 2000px) {
+    .e-form-1,
+    .e-form-2 {
+        width: 200px;
+    }
+
+    .message {
+        width: 400px;
+    }
+    .box2_child2 {
+        border-top-left-radius: 10%;
+        width: 21px;
+        height: 100vh;
+        background-color: rgba(0, 179, 134, 0.1);
+        position: relative;
+        top: 0;
+        left: calc((100vw - 1391px) / 2);
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .e-form-1,
+    .e-form-2 {
+        width: 200px;
+    }
+
+    .message {
+        width: 400px;
+    }
+    .box2_child2 {
+        border-top-left-radius: 10%;
+        width: 21px;
+        height: 100vh;
+        background-color: rgba(0, 179, 134, 0.1);
+        position: relative;
+        top: 0;
+        left: calc((100vw - 1094px) / 2);
     }
 }

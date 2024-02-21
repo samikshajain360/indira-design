@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
 		<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-        <link href="./style.css" rel="stylesheet"/>
+        <link href="/styles.css" rel="stylesheet"/>
 
         <title>Enter Pan Card Number</title>
         <style>
@@ -18,7 +18,13 @@
                 /* padding-right:20px !important; */
                 font-family: Inter;
             }
-            
+            #kyc_icon{
+                border: solid 2px #00b386 !important;
+                
+            }
+            #kyc_icon h6{
+                color:#00b386 !important;
+            }
         </style>
     </head>
     <body>
@@ -37,10 +43,10 @@
                         </a>
                    </div>
                     <a href="pan_enter.html">
-                        <img src="./images/logo_indira.png" class="img img-fluid pan_logo" style=" max-width: 100%; height: auto;">
+                        <img src="./images/Logo.svg" class="img img-fluid pan_logo" >
                    </a>
-                   <div class="box1_child2-1 ">
-                        <div class="pan_icons">
+                   <div class="box1_child2 ">
+                        <div class="pan_icons" id="kyc_icon">
                             <img src="./images/icons/1.svg" class="img img-fluid">
                             <div class="Vector-1974"></div>
                             <h6 class="icons_hdg common_font">KYC Details</h6>
@@ -69,7 +75,7 @@
                 </div>
                 <div class="col-sm-7 box2_parent">
                     <div class="pan_verif_form">
-                        <form  action="" method="get">
+                        <!-- <form  action="" method="get">
                             <h6 class="PAN-Verification">
                                 PAN Verification
                             </h6>
@@ -82,8 +88,16 @@
                             <div class="form-group">
                                 <input required type="date" name="dob" class="form-control pan_form_input" id="" placeholder="Enter Date of Birth">
                             </div>
-                            <button type="submit" class="btn btn-success  btn-lg btn-block pan_submit_btn">Submit</button>
-                        </form>
+                            <button style="margin-top:215px;" type="submit" class="btn btn-success  btn-lg btn-block pan_submit_btn">Submit</button>
+                        </form> -->
+                        <div>
+                            <img src="./images/degilocker.svg" class="img img-fluid digiimg" />
+                            <div class="common_font degi">                                
+                                <h5 class="digi_hdg1" ><strong>Fetch your Aadhaar using Digilocker</strong></h5>
+                                <h6 class="digi_hdg2" >Yes, Quicker process with no manual uploads</h6>
+                            </div>
+                            <a href="#" style="margin-top:50px;" class="btn btn-success btn-block pan_submit_btn  ">Continue with Digilocker</a>
+                        </div>
                     </div>        
                     <div class="box2_child2">
                            
